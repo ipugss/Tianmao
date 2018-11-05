@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>register.html</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	
+	<style type="text/css">
+		/*		全局		*/
+		*{margin:auto;paddding:0px;position:relative;}
+		body{width:100%;min-width:990px;height:100%;text-align: center;}
+		i{font-style:normal;font-size:12px;color:#fff;}
+		.font-icon{font-family: mui-global-iconfont!important;font-size: 12px;}
+    	@font-face{
+    		font-family: mui-global-iconfont;
+    		src:url(fonts/iconfont.eot);
+    		src:url(fonts/iconfont.eot?#iefix) format('embedded-opentype'),
+    			url(fonts/iconfont.woff) format('woff'),
+    			url(fonts/iconfont.ttf) format('truetype'),
+    			url(fonts/iconfont.svg#iconfont) format('svg')
+    	}
+    	
+		/*		top开始		*/
+		.top{width:100%;min-width:990px;height:48px;}
+		.top ol{width:880px;height:48px;list-style:none;border-bottom:2px;border-style:solid;border-bottom-color:#999;border-top:0px;border-left:0px;border-right:0px;}
+		.top ol li{width:150px;height:48px;padding:0px 30px;float:left;border-width:0px 0px 2px 0px;border-bottom-color: #999;border-style: solid;line-height:46px;}
+		.top ol li i{display:inline-block;margin-right:5px;width:24px;height:24px;text-align:center;font-style:normal;line-height:24px;font-size:14px;font-weight:700;color:#fff;background:url(image/ico-circle2.png);}
+		.top ol li span{font-size:16px;font-weight:700;font-family: 微软雅黑;color:3e3e3e;}
+		/*		top结束		*/
+		/*		contant开始		*/
+		.contant{width:100%;min-width:990px;height:400px;}
+		.contant .set_username{width:720px;height:400px;margin-top:40px;display: block;border:1px solid #ddd;border-radius: 4px;}
+		.contant .set_username .phone{width:400px;height:60px;margin-top:60px;}
+		.contant .left{width:70px;height:60px;line-height: 60px;float:left;font-size:14px;font-weight:100;text-align:right;padding-right:30px;}
+		.contant .right{width:300px;height:60px;line-height: 60px;float:right;}
+		.contant .set_username .phone .right .user_phone{width:180px;height:18px;letter-spacing:2px;padding:10px 10px 10px 120px;font-size:12px;color:#999;border-width:1px;border-style:solid;border-color:#999;outline:none;}
+		.contant .set_username .phone .right span{width:110px;height:40px;background-color:#666;cursor:pointer;position:absolute;left:0px;top:12px;border:none;}
+		.contant .set_username .phone .right span i{line-height:39px;}
+		.contant .set_username .phone .right span .right_i_1{float:left;font-style:normal;line-height:39px;margin-left:4px;}
+		.contant .set_username .phone .right span .right_i_2{float:right;font-style:normal;line-height:39px;font-size:8px;margin-right:4px;}
+		.contant .set_username .phone .right span .right_i_3{float:right;font-style:normal;line-height:39px;margin-right:2px;}
+		.contant .set_username .phone .right #phone_right_node{position:absolute;top:12px;right:-204px;width:186px;height:39px;text-align:left;color:#ff0039;letter-spacing: 2px;line-height: 39px;display: none;}
+		.contant .set_username .identify{width:400px;height:60px;margin-top:10px;}
+		
+		/*		copy start  	*/
+		#drag{position: relative;background-color: #e8e8e8;width: 300px;height: 38px;line-height: 34px;text-align: center;margin-top:14px;}
+		#drag .handler{position: absolute;top: 0px;left: 0px;width: 40px;height: 36px;border: 1px solid #ccc;cursor: move;color: #888;line-height: 36px;font-size: 20px;}
+		.handler_bg{background: #fff no-repeat center;}
+		#drag .drag_bg{ background-color: #7ac23c;height: 38px;width: 0px;float:left;}
+		#drag .drag_text{position: absolute;top: 0px;width: 300px;color:#9c9c9c;height: 38px;
+		    -moz-user-select: none;
+		    -webkit-user-select: none;
+		    user-select: none;
+		    -o-user-select:none;
+		    -ms-user-select:none;
+		    font-size: 12px;        //  add
+		}
+		.slidetounlock{
+            font-size: 12px;
+            background:-webkit-gradient(linear,left top,right top,color-stop(0,#4d4d4d),color-stop(.4,#4d4d4d),color-stop(.5,#fff),color-stop(.6,#4d4d4d),color-stop(1,#4d4d4d));
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            -webkit-animation:slidetounlock 3s infinite;
+            -webkit-text-size-adjust:none
+        }
+        @-webkit-keyframes slidetounlock{0%{background-position:-200px 0} 100%{background-position:200px 0}}
+		/*		copy  end		*/
+		.contant .set_username .next{width:400px;height:60px;margin-top:60px;}
+		.contant .set_username .next .next_but{width:180px;height:36px;border:0px;background-color:#ededed;color:#fff;outline:none;cursor:pointer;border-radius: 3px;}
+		.contant .set_username .next div{width:400px;height:60px;}
+		.contant .set_username .next .next_but:hover{background-color:#bebebe}
+		/*		set_username结束			*/
+		
+		/*		set_moreInfo开始			*/
+		.contant .set_moreInfo{width:720px;height:400px;margin-top:40px;display:none;border:1px solid #ddd;border-radius: 4px;}
+		.contant .set_moreInfo .moreInfo_item{width:400px;height:60px;margin-top:10px;}
+		.contant .set_moreInfo .nickname{margin-top:60px;}
+		.contant .set_moreInfo .moreInfo_item input{    float: left;border:1px solid #999;outline:none;width: 240px;height: 18px;letter-spacing: 2px;padding:10px 10px 10px 10px;font-size: 12px;color:#999;}
+		.contant .set_moreInfo .set_moreInfo_right_node{position:absolute;top:12px;right:-180px;width:186px;height:39px;text-align:left;color:#ff0039;letter-spacing: 2px;line-height: 39px;display: none;}
+		.contant .set_moreInfo .moreInfo_item .next_but{width:180px;height:36px;float:left;border:0px;background-color:#ededed;color:#fff;outline:none;cursor:pointer;border-radius: 3px;}
+		.contant .set_moreInfo .moreInfo_item .next_but:hover{background-color:#bebebe}
+		
+		.contant .set_password{width:720px;height:400px;margin-top:40px;display:none;border:1px solid #ddd;border-radius: 4px;}
+		.contant .set_password .set_password_item{width:400px;height:60px;margin-top:10px;}
+		.contant .set_password .set_password_item input{    float: left;border:1px solid #999;outline:none;width: 240px;height: 18px;letter-spacing: 2px;padding:10px 10px 10px 10px;font-size: 12px;color:#999;}
+		.contant .set_password .set_password_item .set_moreInfo_right_node{position:absolute;top:12px;right:-180px;width:186px;height:39px;text-align:left;color:#ff0039;letter-spacing: 2px;line-height: 39px;display: none;}
+		.contant .set_password .set_password_item .next_but{width:180px;height:36px;float:left;border:0px;background-color:#ededed;color:#fff;outline:none;cursor:pointer;border-radius: 3px;}
+		.contant .set_password .set_password_item .next_but:hover{background-color:#bebebe}
+		
+		.contant .success{width:720px;height:400px;margin-top:40px;display:none;border:1px solid #ddd;border-radius: 4px;}
+		.contant .success .success_item{width:400px;height:60px;margin-top:10px;}
+		.contant .success .success_item img{width:240px;}
+		.contant .success .success_item i{color:#aaa;}
+		.contant .success .success_item .icon-31yiguanzhudianpu{color:red;}
+		.contant .success .success_item input{width:256px;height:40px;outline:none;border:0px;border-radius:3px;background-color:#ff0036;color:#fff;letter-spacing: 4px;cursor:pointer;}
+		
+		
+	</style>
+	
+	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/drag.js"></script>
+  </head>
+  
+  <body>
+  	<!-- 顶部区域 -->
+    <div class="top">
+    	<ol>
+    		<li style="border-bottom-color: #ff0036;">
+    			<i style="background:url(image/ico-circle1.png);">1</i>
+    			<span>设置用户名</span>
+    		</li>
+    		<li>
+    			<i>2</i>
+    			<span>填写账号信息</span>
+    		</li>
+    		<li>
+    			<i>3</i>
+    			<span>设置支付方式</span>
+    		</li>
+    		<li>
+    			<i>4</i>
+    			<span>注册成功</span>
+    		</li>
+    	</ol>
+    </div>
+    
+    <!-- contant区 -->
+    <div class="contant">
+    	<div class="set_username">
+    		<div class="phone">
+    			<span class="left">手机号</span>
+    			<span class="right">
+    				<input class="user_phone" type="text" placeholder="请输入您的手机号" onblur="check_phone();">
+    				<span>
+    					<i class="right_i_1">中国大陆</i>
+    					<i class="font-icon icon-sanjiao1 right_i_2"></i>
+    					<i class="right_i_3">+86</i>
+    				</span>
+    				<i class="font-icon icon-okok2" id="phone_right_node">请输入手机号码</i>
+    			</span>
+    		</div>
+    		
+    		<!-- 此处参考https://blog.csdn.net/shuai_wy/article/details/62419257 -->
+    		<div class="identify">
+    			<span class="left">验证</span>
+    			<span class="right">
+    				<div id="drag">
+						<div class="drag_bg"></div>
+						<div class="drag_text slidetounlock" onselectstart="return false;" unselectable="on">请按住滑块，拖动到最右边</div>
+						<div class="handler handler_bg font-icon icon-zuiyou"></div>
+					</div>
+
+				</span>
+    		</div>
+    		<div class="next">
+    			<div><input class="next_but" type="button" value="下一步"></div>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="set_moreInfo">
+    		<div class="moreInfo_item nickname">
+    			<span class="left">昵称</span>
+    			<span class="right"><input type="text" placeholder="支持中文/英文/特殊字符" onblur="check_moreInfo(this,1)"></span>
+    			<i class="font-icon icon-okok2 set_moreInfo_right_node">请输入昵称</i>
+    		</div>
+    		<div class="moreInfo_item">
+    			<span class="left">邮箱</span>
+    			<span class="right"><input type="text" placeholder="请输入您的邮箱"  onblur="check_moreInfo(this,2)"></span>
+    			<i class="font-icon icon-okok2 set_moreInfo_right_node">请输入您的邮箱</i>
+    		</div>
+    		<div class="moreInfo_item">
+    			<span class="left"></span>
+    			<span class="right"><input class="next_but" type="button" value="下一步"></span>
+    			
+    		</div>
+    	</div>
+    	
+    	<div class="set_password">
+    		<div class="set_password_item" style="margin-top:60px;">
+    			<span class="left">登录密码</span>
+    			<span class="right"><input type="password"  placeholder="请输入您的登录密码" onblur="check_password(this,1)"></span>
+    			<i class="font-icon icon-okok2 set_moreInfo_right_node">请输入您的登录密码</i>
+    		</div>
+    		<div class="set_password_item">
+    			<span class="left">再次输入</span>
+    			<span class="right"><input type="password"  placeholder="请再次输入您的密码" onblur="check_password(this,2)"></span>
+    			<i class="font-icon icon-okok2 set_moreInfo_right_node">请再次输入您的密码</i>
+    		</div>
+    		<div class="set_password_item">
+    			<span class="left"></span>
+    			<span class="right"><input class="next_but" type="button" value="下一步"></span>
+    		</div>
+    	</div>
+    	
+    	<div class="success">
+    		<div class="success_item" style="margin-top:100px;">
+    			<img src="image/login_logo.png">
+    		</div>
+    		<div class="success_item">
+    			<i class="font-icon icon-31yiguanzhudianpu">恭喜你成功注册成为天猫会员</i>
+    			<br>
+    			<i id="end_node">..3..秒后将自动跳转到登录页面</i>
+    		</div>
+    		<div class="success_item">
+    			<input type="button" value="前往">
+    		</div>
+    		
+    	</div>
+    </div>
+  </body>
+</html>

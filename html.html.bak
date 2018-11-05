@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>html.html</title>
+	
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    
+    <style type="text/css">
+    					/*全局开始*/
+    	*{margin:0px;padding:0px;font-style:normal;position:relative;}
+    	body{text-align:center;min-width:1000px;}
+    	@font-face{
+    		font-family: mui-global-iconfont;
+    		src:url(fonts/iconfont.eot);
+    		src:url(fonts/iconfont.eot?#iefix) format('embedded-opentype'),
+    			url(fonts/iconfont.woff) format('woff'),
+    			url(fonts/iconfont.ttf) format('truetype'),
+    			url(fonts/iconfont.svg#iconfont) format('svg')
+    	}
+    	.icon{color:red;}
+    	
+    					/*head部分css开始*/
+    	
+    	.head{width:100%;height:36px;position:relative;background: #605b5b;}
+    	.head-contant{margin:0px auto;min-width:1000px;max-width:1300px;width:80%;height:36px;}
+    	.welcome{width:260px;height:36px;float:left;color:#999;font-size: 10px;}
+    	.welcome *{line-height: 36px;margin:auto 8px;text-decoration: none;color:#999;transform:transform 1s;}
+    	.welcome a:hover{color:red;}
+    	.me{width:650px;height:36px;float:right;color:#999;font-size:10px;}
+    	.me ul{list-style:none;}
+    	.me ul li{float:left;height:36px;margin:auto 12px;}
+    	.me ul li a{text-decoration: none;color:#999;line-height: 36px;}
+    	.me ul li a:hover{color:red;}
+    	b{top:17px;float:right;width:0px;height:0px;margin-left:4px;border-width:3px;border-bottom-width:0px;border-style:solid dashed dashed;border-color:#bbb transparent transparent;font-size:0px;line-height:0px;transition:transform 1s;-moz-transition:-moz-transform 1s; /* Firefox 4 */-webkit-transition:-webkit-transform 1s; /* Safari and Chrome */-o-transition:-o-transform 1s; /* Opera */}
+    	.me ul li i{font-family: mui-global-iconfont!important;font-size: 12px;}
+    	.head-open:hover{background-color:#fff;cursor:pointer;}
+    	.head-open:hover b{transform:rotate(180deg);-moz-transform:rotate(180deg); /* Firefox 4 */-webkit-transform:rotate(180deg); /* Safari and Chrome */-o-transform:rotate(180deg); /* Opera */}
+    	.head-open:hover a{color:red;}
+    	.padding-lr{padding-left:8px;padding-right:8px;}
+    	
+    					/*head部分结束*/
+
+		.search{width:100%;height:100px;border:1px solid red;}
+		.logo{width:300px;height:100px;left:100px;}
+    	.logo div{position:absolute;}
+    	
+    </style>
+    <script>
+        function myBrowser() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1;
+            if (isOpera) {
+                return "Opera"
+            }; //判断是否Opera浏览器
+            if (userAgent.indexOf("Firefox") > -1) {
+                return "FF";
+            } //判断是否Firefox浏览器
+            if (userAgent.indexOf("Chrome") > -1) {
+                return "Chrome";
+            }
+            if (userAgent.indexOf("Safari") > -1) {
+                return "Safari";
+            } //判断是否Safari浏览器
+            if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+                return "IE";
+            }; //判断是否IE浏览器
+        }
+
+        //以下是调用上面的函数
+        var mb = myBrowser();
+        if ("IE" == mb) {
+            alert("我是 IE");
+        }
+        if ("FF" == mb) {
+            alert("我是 Firefox");
+        }
+        if ("Chrome" == mb) {
+            alert("我是 Chrome");
+        }
+        if ("Opera" == mb) {
+            alert("我是 Opera");
+        }
+        if ("Safari" == mb) {
+            alert("我是 Safari");
+        }
+    </script>
+    
+  </head>
+  
+  <body>
+  
+  		<!-- 头部开始  -->
+  		
+  		<div class="head">
+  			<div class="head-contant">
+  			<div class="welcome">
+  				<em>喵，欢迎来天猫</em>
+  				<a href="#">请登录</a>
+  				<a href="#">免费注册</a>
+  			</div>
+  			<div class="me">
+  				<ul>
+  					<li>
+  						<div class="head-open padding-lr" id="my-taobao">
+  							<a>我的淘宝</a>
+  							<b></b>
+  						</div>
+  					</li>
+  					<li>
+  						<i class="icon icon-gouwuche2"></i>
+  						<a href="#">购物车0件</a>
+  					</li>
+  					<li>
+  						<div class="head-open padding-lr" id="my-collection">
+  							<a href="#">收藏夹</a>
+  							<b></b>
+  						</div>
+  					</li>
+  					<li>
+  						<i class="icon-vertical_line" style="line-height:36px;font-size:18px;"></i>
+  					</li>
+  					<li>
+  						<i class="icon icon-shouji"></i>
+  						<a href="#">手机版</a>
+  					</li>
+  					<li>
+  						<a href="#">淘宝网</a>
+  					</li>
+  					<li>
+  						<div class="head-open padding-lr" id="business">
+  							<a href="#">商家支持</a>
+  							<b></b>
+  						</div>
+  					</li>
+  					<li style="margin:0px;">
+  						<div class="head-open padding-lr" id="web-guide">
+  							<i class="icon icon-liebiao"></i>
+  							<a href="#">网站导航</a>
+  							<b></b>
+  						</div>
+  					</li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  		<!-- head结束 -->
+		<!-- search开始 -->
+		<div class="search">
+			<div class="logo">
+				<div style="left:2px;width:116px;height:40px;margin:30px 0px;position:absolute;">
+					<a href="#">
+						<img src="image/logo.png">
+					</a>
+				</div>
+				<div style="width:170px;height:16px;right:0px;margin:42px 0px;position:absolute;background-image:url(image/logo-1.png)"></div>
+			</div>
+		
+		
+		</div>
+		<!-- search结束 -->
+  </body>
+</html>

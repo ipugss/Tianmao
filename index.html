@@ -1,0 +1,407 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>html.html</title>
+	
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    
+    <style type="text/css">
+    					/*全局开始*/
+    	*{margin:0px;padding:0px;font-style:normal;position:relative;}
+    	body{text-align:center;}
+    	ul{list-style: none;}
+    	.a{text-decoration: none;color:#999;line-height: 36px;font-size:10px;}
+    	.a:hover{color:red;}
+    	.font-icon{font-family: mui-global-iconfont!important;font-size: 12px;}
+    	@font-face{
+    		font-family: mui-global-iconfont;
+    		src:url(fonts/iconfont.eot);
+    		src:url(fonts/iconfont.eot?#iefix) format('embedded-opentype'),
+    			url(fonts/iconfont.woff) format('woff'),
+    			url(fonts/iconfont.ttf) format('truetype'),
+    			url(fonts/iconfont.svg#iconfont) format('svg')
+    	}
+    	.icon{color:red;}
+    	
+    					/*head部分css开始*/
+    	
+    	.head{width:100%;min-width:1230px;height:36px;position:relative;background: #605b5b;z-index:10;}
+    	.head-contant{margin:0px auto;min-width:1210px;max-width:1300px;width:80%;height:36px;}
+    	.welcome{width:206px;height:36px;float:left;color:#999;font-size: 10px;}
+    	.welcome *{line-height: 36px;margin:auto 8px;text-decoration: none;color:#999;transition:transform 1s;}
+    	.welcome a:hover{color:red;}
+    	.me{width:600px;height:36px;float:right;color:#999;font-size:10px;}
+    	.me ul{list-style:none;}
+    	.me ul li{float:left;height:36px;margin:auto 12px;}
+    	.me ul li a{text-decoration: none;color:#999;line-height: 36px;}
+    	.me ul li a:hover{color:red;}
+    	b{top:17px;float:right;width:0px;height:0px;margin-left:4px;border-width:3px;border-bottom-width:0px;border-style:solid dashed dashed;border-color:#bbb transparent transparent;font-size:0px;line-height:0px;transition:transform 1s;-moz-transition:-moz-transform 1s; /* Firefox 4 */-webkit-transition:-webkit-transform 1s; /* Safari and Chrome */-o-transition:-o-transform 1s; /* Opera */}
+    	.me ul li i{font-family: mui-global-iconfont!important;font-size: 12px;}
+    	.head-open:hover{background-color:#fff;cursor:pointer;}
+    	.head-open:hover b{transform:rotate(180deg);-moz-transform:rotate(180deg); /* Firefox 4 */-webkit-transform:rotate(180deg); /* Safari and Chrome */-o-transform:rotate(180deg); /* Opera */}
+    	.head-open:hover a{color:red;}
+    	.padding-lr{padding-left:8px;padding-right:8px;}
+    	
+    					/*head部分结束*/
+    					
+    					/*search开始*/
+
+		.search{width:80%;height:100px;border:1px solid transparent;min-width:1210px;max-width:1300px;margin:auto;padding:0px 10px 0px 10px;}
+		.logo{width:116px;height:40px;left:10px;position:absolute;margin:30px 0px;}
+    	.logo div{position:absolute;}
+        .search-small{width:512px;height:38px;margin:28px auto;outline:none;}
+        .search-text{width: 416px; height: 30px; border: 2px solid #FF0036; float: left; outline: none;padding:2px 6px;}
+        .search-botton{width: 80px; height: 38px; border: 0px; cursor:pointer;float: right; background-color: #FF0036; outline: none;}
+        .search-small div ul {list-style: none;}
+        .search-small div ul li{float:left;margin:1px 2px;}
+        .search-small div ul li i{line-height:36px;}
+        .app{right:10px;height:40px;position:absolute;top:8px;}
+        .app a img{width:200px;border:0px;}
+        
+          				/*search结束*/
+          				/*contant开始*/
+          				
+        .contant{width:80%;min-width:1210px;margin:auto;text-align:center;}
+        .contant ul{list-style:none;width:100%;min-width:1210px;}
+        .contant ul li{width:220px;height:320px;float:left;margin:10px;border:1px solid transparent;}
+        .contant ul li:hover{border-color:#FF0036;}
+        .item input{width:215px;height:30px;margin-top:10px;border:0px;background-color: #FF0036;color:#fff; outline: none;cursor: pointer;}
+    	
+    	/*		菜单menu		*/
+    	
+    	.menu{width:32px;height:100%;position:fixed;top:0px;right:0px;background-color:#111;}
+    	.menu .item{background-color:#111;color:#fff;height:38px;cursor:pointer;}
+    	.menu .item:hover{background-color:red;}
+    	.menu .button-car{width:24px;height:100px;border-top-width:1px;border-top-color: #fff;cursor:pointer;border-bottom-width:1px;border-bottom-color: #fff;border-style:solid;border-left-width:4px;border-right-width:4px;border-left-color: transparent;border-right-color: transparent;background-color:#111;font-size:12px;}
+    	.menu .button-car i{color:red;}
+    	.menu .button-car p{color:#fff;}
+    	.menu .button-car:hover{background-color:red;border-color:red;}
+    	.menu .button-car:hover i{color:#fff;}
+    	.menu .button-car:hover p{color:#fff;}
+    	.menu .item i{font-size:14px;top:8px;}
+    	
+    	/*		购物车car	*/
+    	
+    	.car{position:fixed;width:306px;height:500px;background-color:#fff;right:64px;top:36px;opacity:0;display:none;}
+    	.car ul{width:306px;height:400px;overflow:auto;overflow-x: unset;}
+    	.car-item{width:98%;height:100px;background-color:#fff;outline:none;margin:2px auto;}
+    	.car-image{width:92px;float:left;margin:4px 4px;}
+    	.car-item img{cursor:pointer;border:none;}
+    	.car-item input{outline:none;}
+    	.car-info{font-size:12px;text-align:left;width: 188px;height: 92px;float: right;margin-top: 4px;}
+    	.car-num{width:120px;bottom:0px;position:absolute;margin-left: 4px;}
+    	.car-num .jiajian{width:10px;}
+    	.car-num input{width:12px;margin:0px 4px;padding-left:4px;padding-right:4px;}
+    	.car-num .shanchu{width:16px;margin:-4px 20px;}
+    	.car-info h3{color:red;position:absolute;right:8px;bottom:0px;}
+    	.car .count{width:300px;height:50px;position:absolute;bottom:0px;}
+    	.car .count .count-all{width:100px;height:40px;float:right;border:0px;background-color:red;outline:none;margin:5px;font-family:微软雅黑;color:#fff;letter-spacing: 6px;cursor:pointer;}
+    	.car .count .count-txt{width:80px;height:50px;margin-top:-1px;line-height:50px;font-size:24px;color:#f00;display:block;float:left;}
+    	.car .count .count-price{width:70px;height:50px;line-height:50px;font-size:22px;color:#f00;display:block;float:right;}
+    	
+    	/*		自定义滚动条		*/
+    	
+    	.scroll::-webkit-scrollbar{width:5px;height:10px;background-color:transparent;}     /*滚动条整体部分*/
+    	.scroll::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;background-color:#fff;}         /*scroll轨道背景*/
+    	.scroll::-webkit-scrollbar-thumb{border-radius: 10px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color:#f00;}		/*thumb移动块*/
+    
+    </style>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/shopping.js"></script>
+    <!-- <script type="text/javascript" src="js/check.js"></script>-->
+    
+  </head>
+  
+  <body>
+  
+  		<!-- 头部开始  -->
+  		
+  		<div class="head">
+  			<div class="head-contant">
+  			<div class="welcome">
+  				<em>喵，欢迎来天猫</em>
+  				<a href="login.html">请登录</a>
+  				<a href="register.html">免费注册</a>
+  			</div>
+  			<div class="me">
+  				<ul>
+  					<li>
+  						<div class="head-open padding-lr" id="my-taobao">
+  							<a>我的淘宝</a>
+  							<b></b>
+  						</div>
+  					</li>
+  					<li>
+  						<i class="icon icon-gouwuche2"></i>
+  						<a class="gouwuche" href="#">购物车0件</a>
+  					</li>
+  					<li>
+  						<div class="head-open padding-lr" id="my-collection">
+  							<a href="#">收藏夹</a>
+  							<b></b>
+  						</div>
+  					</li>
+  					<li>
+  						<i class="icon-vertical_line" style="line-height:36px;font-size:18px;"></i>
+  					</li>
+  					<li>
+  						<i class="icon icon-shouji"></i>
+  						<a href="#">手机版</a>
+  					</li>
+  					<li>
+  						<a href="#">淘宝网</a>
+  					</li>
+  					<li>
+  						<div class="head-open padding-lr" id="business">
+  							<a href="#">商家支持</a>
+  							<b></b>
+  						</div>
+  					</li>
+  					<li style="margin:0px;">
+  						<div class="head-open padding-lr" id="web-guide">
+  							<i class="icon icon-liebiao"></i>
+  							<a href="#">网站导航</a>
+  							<b></b>
+  						</div>
+  					</li>
+  				</ul>
+  			</div>
+  			</div>
+  		</div>
+  		<!-- head结束 -->
+		<!-- search开始 -->
+		<div class="search">
+			<div class="logo">
+				<a href="#">
+					<img src="image/logo.png" style="border:0px">
+				</a>
+			</div>
+		    <div class="search-small">
+                <input class="search-text" placeholder="搜索  天猫  商品/店铺/品牌" type="text">
+                <input class="search-botton" type="button" value="搜  索" >
+                <div style="position:absolute;width:480px;height:20px;margin-top:36px;">
+                    <ul>
+                        <li><a class="a" href="#">长袖连衣裙</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">2017新</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">棉麻连衣裙</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">背心裙</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">半身裙</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">a字裙</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">衬衫</a></li>
+                        <li><i class="icon-vertical_line font-icon"></i></li>
+                        <li><a class="a" href="#">蕾丝连衣裙</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="app">
+                <a href="#">
+
+                    <img src="image/app.jpg">
+                </a>
+            </div>
+		
+		</div>
+		<!-- search结束 -->
+		<img src="image/pinpai.jpg" style="width:80%;min-width: 1210px;">
+		<!-- <img src="image/top.png" style="width:80%;"> -->
+		
+		<!-- contant开始 -->
+		
+		<div class="contant">
+			<ul>
+				<li>
+					<div class="item">
+						<img alt="" src="image/1.jpg">
+						<h4 style="color:red;">¥<span>699.00</span></h4>
+						<p style="color:#333;font-size:12px;">vero moda夏季圆点无袖连衣裙</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/2.jpg">
+						<h4 style="color:red;">¥<span>399.00</span></h4>
+						<p style="color:#333;font-size:12px;">vero moda夏季甜美字母印花网纱连衣</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/3.jpg">
+						<h4 style="color:red;">¥<span>899.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价769Vero Moda百褶中长</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/4.jpg">
+						<h4 style="color:red;">¥<span>999.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10用券价769Vero Moda蕾丝五分袖</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/5.jpg">
+						<h4 style="color:red;">¥<span>698.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价599Vero Moda五分袖纯</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/6.jpg">
+						<h4 style="color:red;">¥<span>399.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价499Vero Moda荷叶边条</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/7.jpg">
+						<h4 style="color:red;">¥<span>399.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价699Vero Moda拼接收腰</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/8.jpg">
+						<h4 style="color:red;">¥<span>1099.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价599Vero Moda渐变色雪</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/9.jpg">
+						<h4 style="color:red;">¥<span>1199.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价599Vero Moda五分袖休</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/10.jpg">
+						<h4 style="color:red;">¥<span>3099.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价649Vero Moda系带中长</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/11.jpg">
+						<h4 style="color:red;">¥<span>3199.00</span></h4>
+						<p style="color:#333;font-size:12px;">vero moda夏季条纹五分袖连衣裙</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/12.jpg">
+						<h4 style="color:red;">¥<span>2098.00</span></h4>
+						<p style="color:#333;font-size:12px;">vero moda夏季圆点无袖连衣裙</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/13.jpg">
+						<h4 style="color:red;">¥<span>889.00</span></h4>
+						<p style="color:#333;font-size:12px;">Vero Moda 女 VMSAMBA 女装</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/14.jpg">
+						<h4 style="color:red;">¥<span>998.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价699Vero Moda木耳边两</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+				<li>
+					<div class="item">
+						<img alt="" src="image/15.jpg">
+						<h4 style="color:red;">¥<span>598.00</span></h4>
+						<p style="color:#333;font-size:12px;">5.10聚用券价599Vero Moda露肩一字</p>
+						<p style="color:#999;font-size:12px;">vero moda官方旗舰店</p>
+						<input class="join" type="button" value="加入购物车">
+					</div>
+				</li>
+			</ul>
+		
+		</div>
+		<!-- contant结束 -->
+		<div class="menu">
+			<div class="item"style="margin-top:100px;">
+				<i class="font-icon icon-mao1" style="font-size:20px;top:8px;"></i>
+			</div>
+			<div class="button-car" id="button-car">
+				<i class="font-icon icon-tianmaochaoshigouwuche" style="font-size:21px;top:11px;right:-1px;"></i>
+				<p style="top:12px;font-size: 11px;">购</br>物</br>车</p>
+			</div>
+			<div class="item">
+				<i class="font-icon icon-qian2" style="font-size:16px;" ></i>
+			</div>
+			<div class="item">
+				<i class="font-icon icon-shoucang" ></i>
+			</div>
+			<div class="item">
+				<i class="font-icon icon-shijian" ></i>
+			</div>
+			<div class="item"style="margin-top:240px;">
+				<i class="font-icon icon-xiugaioryijian" ></i>
+			</div>
+			<div class="item">
+				<i class="font-icon icon-erweima" ></i>
+			</div>
+			<div class="item">
+				<i class="font-icon icon-huidaodingbu" ></i>
+			</div>
+		</div>
+		
+		<!-- 菜单结束 -->
+		<!-- 购物车car开始 -->
+		
+		<div class="car" id="car">
+			<h4 style="margin:14px 0px 14px 0px;color:#f00;">我的购物车</h4>
+			
+			<ul class="scroll">
+			</ul>
+			<div class="count">
+				<div style="width:150px;height:50px;float:left;">
+					<span class="count-txt">总计:</span>
+					<span class="count-price">$0.00</span>
+				</div>
+				<div style="width:140px;height:50px;float:right;">
+					<input class="count-all" style="" type="button" value="去结算" >
+				</div>
+			</div>
+		</div>
+  </body>
+</html>

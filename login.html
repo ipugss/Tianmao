@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>lohin.html</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+	<style type="text/css">
+		/* css全局 */
+		*{margin:auto;padding:0px;font-style:normal;}
+		body{width:100%;height:100%;}
+		.font-icon{font-family: mui-global-iconfont!important;font-size: 12px;}
+    	@font-face{
+    		font-family: mui-global-iconfont;
+    		src:url(fonts/iconfont.eot);
+    		src:url(fonts/iconfont.eot?#iefix) format('embedded-opentype'),
+    			url(fonts/iconfont.woff) format('woff'),
+    			url(fonts/iconfont.ttf) format('truetype'),
+    			url(fonts/iconfont.svg#iconfont) format('svg')
+    	}
+		
+		/* Logo区 */
+		.logo{width: 1190px;height:44px;padding:22px 0px;background-color: #fff;}
+		.logo a img{width:190px;height:27px;margin-top:8px;}
+		
+		/* contant区 */
+		.contant{width:100%;min-width: 1190px;height:600px;background-color: rgb(67, 193, 172);position: relative;}
+		.contant .background{width:1190px;margin:auto;}
+		.contant .background img{width: 1190px;height:600px;}
+		.contant .login_gui{width:350px;height:410px;background-color:#fff;position: absolute;top:90px;right:10%;}
+		
+		.login_gui .top{width:350px;height:60px;position: relative;}
+		.login_gui .top .QRcode{width:56px;height:52px;position:absolute;right:2px;top:6px;cursor:pointer;}
+		.login_gui .top .QRcode i{font-size:52px;color:red;}
+		.login_gui .top .switch{cursor:pointer;}
+		.login_gui .top .QRcode_words{width:144px;height:28px;position:absolute;right:60px;top:10px;font-size:12px;border:1px solid #f3d995;background: #fefcee;line-height:28px;color:#df9c1f}
+		.login_gui .top .words{width:150px;height:28px;color:#3c3c3c;font-size:16px;position:absolute;left:24px;top:46px;font-weight: 1000;}
+		
+		.login_gui .center{width:350px;height:460px;position: relative;text-align:center;}
+		.login_gui .center .use_password{display:block;}
+		.login_gui .center .username{width:100%;height:60px;margin-top:20px;}
+		.login_gui .center .username i{position:absolute;width:40px;height:40px;background-color:#ddd;font-size:22px;line-height:40px;color:#606060}
+		.login_gui .center .username input{width:240px;height:18px;padding:10px 8px 10px 50px;outline:none;font-size:14px;border:1px solid #cbcbcb;color: #9b9b9b;}
+		.login_gui .center .password{width:100%;height:60px;}
+		.login_gui .center .password i{position:absolute;width:40px;height:40px;background-color:#ddd;font-size:22px;line-height:40px;color:#606060}
+		.login_gui .center .password input{width:240px;height:18px;padding:10px 8px 10px 50px;outline:none;font-size:14px;border:1px solid #cbcbcb;color: #9b9b9b;}
+		
+		.login_gui .center .do_it{width:100%;height:40px;}
+		.login_gui .center .do_it .do{width:300px;height:42px;line-height:40px;cursor:pointer;background-color:#ff0036;color:#fff;font-size:16px;border:none;outline:none;}
+		.login_gui .center .do_it .do:hover{background-color:#ff345f;}
+		.login_gui .center .help{width:300px;height:20px;margin-top: 10px;}
+		.login_gui .center .help ul{float:right;list-style:none;}
+		.login_gui .center .help li{float:left;margin:2px 4px;}
+		.login_gui .center .help li a{text-decoration: none;color: #999;font-size:10px;}
+		.login_gui .center .help li a:hover{color:red;}
+		.login_gui .center .fast{width:240px;height:50px;margin:30px auto 0px;}
+		.login_gui .center .fast ul{list-style:none;}
+		.login_gui .center .fast li{float:left;margin:0px 10px;}
+		.login_gui .center .fast a{text-decoration: none;}
+		.login_gui .center .fast a img{width:40px;border:0px;}
+		
+		.login_gui .center .use_QRcode{display:none;}
+		.login_gui .center .QRcode_info{width:188px;margin:24px auto 0px;height:40px;font-size:12px;color:#999;}
+		.login_gui .center .QRcode_info i{font-size:36px;color:red;float:left;}
+		.login_gui .center .QRcode_info ul{width: 144px;line-height: 18px;color: #6c6c6c;font-size: 12px;list-style:none;float:right;}
+		.login_gui .center .QRcode_info li{float:left;margin:0px 2px 0px 0px;}
+		.login_gui .center .QRcode_info li a{text-decoration: none;color:#ff0036;}
+		.login_gui .center .QR_bottom{width:240px;height:20px;margin:20px auto 0px;}
+		.login_gui .center .QR_bottom ul{line-height: 20px;color: #6c6c6c;font-size: 12px;list-style:none;float:right;}
+		.login_gui .center .QR_bottom ul li{float:left;margin:0px 6px 0px 6px;}
+		.login_gui .center .QR_bottom ul li a{text-decoration: none;color:#666;}
+		.login_gui .center .QR_bottom ul li a:hover{color:red;}
+	</style>
+	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" scr="js/drag.js"></script>
+  </head>
+  
+  <body>
+  	<div>
+  		<!-- logo区 -->
+  		<div class="logo">
+  			<a href="index.html">
+  				<img src="image/login_logo.png">
+  			</a>
+  		</div>
+  		
+  		<!-- contant区 -->
+  		<div class="contant">
+  			<div class="background">
+  				<img src="image/login_xp.png">
+  			</div>
+  			
+  			<div class="login_gui">
+  				<div class="top">
+  					<div class="QRcode">
+  						<i class="font-icon icon-shoujishumadiannao" style="display: none;    font-size: 52px;"></i>
+  						<i class="font-icon icon-erweima1" style="display:block;    font-size: 54px;"></i>
+  					</div>
+  					<div class="switch" style="position:absolute;top:1px;right:4px;border-bottom: 30px solid #fff;border-top: 30px solid transparent;border-left: 30px solid #fff;border-right: 30px solid transparent;"></div>
+  						
+  					<div class="QRcode_words">
+  						<div style="width:20px;height:28px;float:left;">
+  							<i class="font-icon icon-dunpai" style="color:#df9c1f;font-size: 20px;margin-left:10px;"></i>
+  						
+  						</div>
+  						<div class="words2" style="width:100px;height:28px;float:left;margin-left:18px;display:none;">密码登录在这里</div>
+  						<div class="words1" style="width:100px;height:28px;float:left;margin-left:18px;display:block;">扫码登录更安全</div>
+  						<div style="border-width: 6px 0 6px 6px;border-left-color: #f3d995;position:absolute;top:10px;right:-7px;border-style: solid;border-bottom-color: transparent;border-top-color: transparent;"></div>
+  						<div style="border-width: 6px 0 6px 6px;border-left-color: #fefcee;position:absolute;top:10px;right:-6px;border-style: solid;border-bottom-color: transparent;border-top-color: transparent;"></div>
+  				
+  					</div>
+  					
+  					<div class="words words1" style="display: block;">密码登录</div>
+  					<div class="words words2" style="display: none;">手机扫码，安全登录</div>
+  				</div>
+  				<div class="center">
+  				
+  					<!-- 使用密码登录 -->
+  					<div class="use_password">
+  						
+  						<div class="username">
+  							<i class="font-icon icon-tubiao211"></i>
+  							<input type="text" placeholder="会员名/邮箱/手机号">
+  						</div>
+  						<div class="password">
+  							<i class="font-icon icon-mima2"></i>
+  							<input type="password" placeholder="密码">
+  						</div>
+  					
+  						<div class="do_it">
+  							<input class="do" type="button"  value="登录">
+  						</div>
+  						<div class="help">
+  							<ul>
+  								<li><a href="#">忘记密码</a></li>
+  								<li><a href="#">忘记会员名</a></li>
+  								<li><a href="register.html">免费注册</a></li>
+  							</ul>
+  						</div>
+  						
+  						<div class="fast">
+  							<ul>
+  								<li><a href="#"><img src="image/qq.png"></a></li>
+  								<li><a href="#"><img src="image/wechat.png"></a></li>
+  								<li><a href="#"><img src="image/pay.png"></a></li>
+  								<li><a href="#"><img src="image/taobao.png"></a></li>
+  							</ul>
+  							<i style="margin:auto;color:#999;font-size:10px;">快速登录</i>
+  						</div>
+  					</div>
+  					
+  					<!-- 扫码登录 -->
+  					<div class="use_QRcode">
+  						<div style="margin-top: 30px;">
+  							<img alt="" src="image/QRcode.png" style="">
+  						</div>
+  						<div class="QRcode_info">
+  							<i class="font-icon icon-31saoma"></i>
+  							<ul>
+  								<li>打开</li>
+  								<li><a href="#">手机天猫</a></li>
+  								<li><i class="font-icon icon-vertical_line" style="font-size:12px;color:#999;"></i></li>
+  								<li><a href="#">手机淘宝</a></li>
+  								<li>扫一扫登录</li>
+  							</ul>
+  						</div>
+  						<div class="QR_bottom">
+  							<ul>
+  								<li><a href="#">密码登录</a></li>
+  								<li><a href="register.html">免费注册</a></li>
+  							</ul>
+  						</div>
+  					</div>
+  					
+  				</div>
+  				
+  			</div>
+  		</div>
+  	</div>
+  </body>
+</html>
